@@ -5,13 +5,17 @@ const {
     create,
     update,
     deleteOne,
-    getByID
+    getByID,
+    updateByID,
+    deleteByID
 } = require('../controllers/movies');
 
 moviesRoute.get('/',retrieveAll);
 moviesRoute.get('/:id', getByID);
 moviesRoute.post('/',create);
 moviesRoute.put('/',update);
+moviesRoute.put('/:id',updateByID)
 moviesRoute.delete('/',deleteOne);
+moviesRoute.delete('/',deleteByID)
 
 module.exports = moviesRoute;
