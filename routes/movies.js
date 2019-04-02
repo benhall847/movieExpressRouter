@@ -4,10 +4,12 @@ const {
     retrieveAll,
     create,
     update,
-    deleteOne
+    deleteOne,
+    getByID
 } = require('../controllers/movies');
 
 moviesRoute.get('/',retrieveAll);
+moviesRoute.get('/:id', getByID);
 moviesRoute.post('/',create);
 moviesRoute.put('/',update);
 moviesRoute.delete('/',deleteOne);

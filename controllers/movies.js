@@ -10,10 +10,14 @@ function update(req,res){
 function deleteOne(req,res){
     res.json({message:"You destroyed the database"})
 }
+function getByID(req,res){
+    res.json({message: `you requested user: ${req.params.id}`})
+}
 
 module.exports = {
     retrieveAll,
     create,
     update,
-    deleteOne
+    deleteOne,
+    getByID
 }
